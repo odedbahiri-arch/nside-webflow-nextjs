@@ -1,0 +1,68 @@
+---
+description: "Converting Webflow exported HTML/CSS/JS to Next.js React components"
+globs: ""
+alwaysApply: false
+---
+
+# Webflow to Next.js Conversion
+
+## Webflow Export Structure (This Project)
+```
+webflow-source/
+├── index.html, services.html, contact.html, etc.   # Original HTML (reference)
+├── styles/
+│   ├── normalize.css               # Keep as-is
+│   ├── webflow.css                 # Base styles (~39KB) — run PurgeCSS
+│   └── nside-cloneable-cms-template-db517e.webflow.css  # Custom (~141KB)
+├── public/js/
+│   └── webflow.js                  # ~770KB jQuery runtime — load lazy
+├── public/images/                  # Convert to WebP, use next/image
+├── public/fonts/                   # EudoxusSans (6 weights)
+└── public/documents/               # JSON animation/interaction files (dropdown-easey, menu-nav, etc.)
+```
+
+## Integration Pattern (cheerio + html-react-parser)
+```tsx
+import cheerio from 'cheerio'
+import parse, { domToReact } from 'html-react-parser'
+
+// Replace <img> with next/image, <a> with next/link
+const replace = (domNode) => {
+  if (domNode.name === 'img') {
+    return <Image src={domNode.attribs.src} alt={domNode.attribs.alt || ''} width={800} height={600} />
+  }
+}
+```
+
+## Cleanup Checklist
+- [ ] Remove `data-wf-site`, `data-wf-page`, `data-wf-domain` attributes
+- [ ] Remove `<meta name="generator" content="Webflow">`
+- [ ] Remove scripts pointing to `*.webflow.com`
+- [ ] Remove Webflow badge HTML
+- [ ] Run PurgeCSS on webflow.css: `npx purgecss --css ./styles/webflow.css --content ./webflow-source/*.html`
+- [ ] Load webflow.js with `next/script strategy="lazyOnload"`
+- [ ] Update CSS url() paths: `../fonts/` → `/fonts/`, `../images/` → `/images/`
+
+## CSS Import Order in layout.tsx
+```tsx
+import '../styles/normalize.css'
+import '../styles/webflow.css'
+import '../styles/nside-cloneable-cms-template-db517e.webflow.css'
+```
+
+## webflow.js Modules Safe to Remove
+- `Webflow.define('maps')` — if no Google Maps
+- `Webflow.define('slider')` — if no sliders
+- `Webflow.define('tabs')` — if no tabs
+- `Webflow.define('lightbox')` — if no lightbox
+- KEEP `Webflow.define('touch')` — other widgets depend on it
+
+## Re-initialize Webflow Interactions in React
+```tsx
+useEffect(() => {
+  window.Webflow && window.Webflow.destroy()
+  window.Webflow && window.Webflow.ready()
+  window.Webflow && window.Webflow.require('ix2').init()
+  document.dispatchEvent(new Event('readystatechange'))
+}, [])
+```

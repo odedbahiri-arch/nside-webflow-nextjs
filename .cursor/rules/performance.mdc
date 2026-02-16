@@ -1,0 +1,68 @@
+---
+description: "Lighthouse and performance optimization for CMS template sites"
+globs: ""
+alwaysApply: false
+---
+
+# Basic Performance Optimization
+
+## Image Optimization (Biggest Win)
+```tsx
+import Image from 'next/image'
+
+<Image
+  src="/images/hero.webp"
+  alt="Description"
+  width={1200}
+  height={800}
+  priority  // Only for above-the-fold images
+/>
+
+// For grid: priority on first 2-3 items only
+<Image priority={index < 3} />
+```
+
+## Convert Images to WebP Before Adding
+```bash
+npx sharp-cli --input images/*.png --output images/ --format webp --quality 80
+```
+
+## Font Optimization
+- Use `next/font/google` for Inter, Open Sans (self-hosts, zero CLS)
+- Use `next/font/local` for EudoxusSans
+- NEVER link to fonts.googleapis.com directly
+- Always set `display: 'swap'`
+- Consider subsetting EudoxusSans if only Latin is needed
+
+## CSS Optimization
+```bash
+# Remove unused Webflow base styles (project CSS is ~141KB)
+npx purgecss --css styles/webflow.css --content webflow-source/*.html --output styles/webflow-purged.css
+
+# Minify
+npx cssnano styles/webflow-purged.css styles/webflow.min.css
+```
+
+## JavaScript Optimization
+- Load webflow.js with `strategy="lazyOnload"`
+- Remove unused Webflow.define() modules from webflow.js
+- Code-split heavy components with `next/dynamic`
+
+```tsx
+import dynamic from 'next/dynamic'
+
+const HeavyComponent = dynamic(() => import('./HeavyComponent'), {
+  loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded" />,
+  ssr: false,
+})
+```
+
+## Add width/height to ALL Images
+Missing dimensions = CLS (layout shift). Always explicit:
+```html
+<!-- Causes layout shift -->
+<img src="photo.jpg" />
+
+<!-- No layout shift -->
+<img src="photo.jpg" width="800" height="600" alt="..." />
+```

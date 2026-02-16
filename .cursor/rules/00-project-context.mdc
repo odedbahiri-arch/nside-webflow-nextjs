@@ -1,0 +1,22 @@
+# Project Context
+
+## Stack
+- Next.js 16 (App Router) deployed on Vercel
+- Webflow exported HTML/CSS/JS converted to Next.js components
+- Webflow CSS kept for converted pages (no Tailwind)
+
+## Project Type
+- **Nside Template** — agency/corporate site converted from Webflow
+- Pages: home, intro, services, projects, contact, search
+
+## Critical Rules
+- Images: use `next/image` with `width`, `height`, and `alt`
+- Fonts: Inter + Open Sans via `next/font/google`
+- Only load Webflow JS (`next/script strategy="lazyOnload"`) when actual Webflow interactions are present
+- Clean Webflow tracking attributes and badges
+- CSS url() paths: use `/fonts/` and `/images/` (public folder)
+
+## File Naming
+- Components: PascalCase (`HeroSection.tsx`)
+- Pages: lowercase (`app/projects/page.tsx`)
+- Utilities: camelCase (`formatDate.ts`)

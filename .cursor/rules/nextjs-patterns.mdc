@@ -1,0 +1,64 @@
+---
+description: "Next.js 16 App Router patterns and Vercel deployment"
+globs: "app/**/*.tsx,app/**/*.ts,next.config.*"
+alwaysApply: false
+---
+
+# Next.js Patterns for Nside Template
+
+## Use Server Components by Default
+```tsx
+// No 'use client' = server component (default, preferred)
+export default async function Page() {
+  return <main>...</main>
+}
+```
+
+Only add `'use client'` for: useState, useEffect, onClick, browser APIs, Webflow JS re-init.
+
+## Font Loading (Zero CLS)
+```tsx
+// app/fonts.ts — Inter + Open Sans (Google)
+import { Inter, Open_Sans } from 'next/font/google'
+
+export const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-inter',
+})
+```
+
+## Root Layout
+```tsx
+// app/layout.tsx — CSS import order
+import '../styles/normalize.css'
+import '../styles/webflow.css'
+import '../styles/nside-cloneable-cms-template-db517e.webflow.css'
+```
+
+## Image Configuration
+```js
+// next.config.js
+images: {
+  formats: ['image/avif', 'image/webp'],
+  remotePatterns: [
+    { protocol: 'https', hostname: 'uploads-ssl.webflow.com' },
+    { protocol: 'https', hostname: 'assets-global.website-files.com' },
+  ],
+}
+```
+
+## Loading Webflow JS Safely
+Only load webflow.js when actual Webflow content with interactions is present:
+```tsx
+import Script from 'next/script'
+<Script src="/js/webflow.js" strategy="lazyOnload" />
+```
+
+## Common Vercel Deploy Fixes
+- `TypeError: Cannot read properties of undefined` → missing `'use client'`
+- `window is not defined` → wrap in `useEffect` or `typeof window !== 'undefined'`
+- Images 404 → check `remotePatterns` in next.config.js
+- CSS not loading → verify import paths in layout.tsx; url() must use `/fonts/` or `/images/` for public assets
+- `c is not a function` → webflow.js needs jQuery/Webflow runtime; don't load it on pages without Webflow content

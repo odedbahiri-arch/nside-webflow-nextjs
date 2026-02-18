@@ -700,7 +700,7 @@ const bodyContentAfterProjects = `
           <div id="w-node-c6a86f47-145d-b8c8-1c44-2b43c426b920-c426b91d" class="stacked-description">
             <h1>NSIDE.</h1>
           </div>
-          <div id="w-node-c6a86f47-145d-b8c8-1c44-2b43c426b923-c426b91d" class="stacked-description">
+          <div id="w-node-c6a86f47-145d-b8c8-1c44-2b43c426b923-c426b91d" class="stacked-description" style={{paddingLeft: '12px'}}>
             <div class="subtitle white">Follow us</div>
             <div class="service-menu-list white">
               <a href="https://www.instagram.com/tycreated/" target="_blank" class="menu-list-item white small w-inline-block">

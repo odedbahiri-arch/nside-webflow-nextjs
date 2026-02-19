@@ -533,7 +533,8 @@ const bodyContentAfterProjects = `
     </div>
     <div class="section">
       <div class="wrapper">
-        <div data-w-id="1aa5acca-7f49-679e-50b8-388c32a77250" class="tripple-grid">
+        <div data-w-id="1aa5acca-7f49-679e-50b8-388c32a77250" class="tripple-grid news-unified-grid">
+          <div class="news-grid-spacer"></div>
           <div id="w-node-_1aa5acca-7f49-679e-50b8-388c32a77251-f168a490" class="intro-wrapper">
             <div class="subtitle-wrapper">
               <div style="-webkit-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 10deg);-moz-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 10deg);-ms-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 10deg);transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 10deg);opacity:0" class="subtitle">Recent Posts</div>
@@ -546,104 +547,6 @@ const bodyContentAfterProjects = `
             <a style="-webkit-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 10deg);-moz-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 10deg);-ms-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 10deg);transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 10deg);opacity:0" href="/news" class="button w-inline-block">
               <div class="button-text">View all posts</div>
             </a>
-          </div>
-        </div>
-        <div class="tripple-grid">
-          <div id="w-node-_1aa5acca-7f49-679e-50b8-388c32a7725d-f168a490" class="collection-list-wrapper w-dyn-list">
-            <div role="list" class="featured-news-list w-dyn-items">
-              <div id="w-node-_1aa5acca-7f49-679e-50b8-388c32a7725f-f168a490" data-w-id="1aa5acca-7f49-679e-50b8-388c32a7725f" style="-webkit-transform:translate3d(0, 15vh, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 5deg);-moz-transform:translate3d(0, 15vh, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 5deg);-ms-transform:translate3d(0, 15vh, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 5deg);transform:translate3d(0, 15vh, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 5deg);opacity:0" role="listitem" class="collection-list-item w-dyn-item">
-                <div class="blog-card-image-wrapper">
-                  <div data-w-id="1aa5acca-7f49-679e-50b8-388c32a77261" class="background-image" style="background-image:url('/images/Space006.jpeg')">
-                    <div class="image-overlay"></div>
-                    <div data-w-id="1aa5acca-7f49-679e-50b8-388c32a77263" class="hover-link-wrapper project-view-link">
-                      <a href="#" class="hover-link w-inline-block">
-                        <div>Read</div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="post-card-info">
-                  <a href="#" class="post-card-description w-inline-block">
-                    <div id="w-node-_1aa5acca-7f49-679e-50b8-388c32a77269-f168a490" class="stacked-description">
-                      <h4>5 Principles Of Effective Web Design</h4>
-                      <div class="body-display">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                    </div>
-                    <div class="subtitle grey">Floor Plans</div>
-                    <div id="w-node-_1aa5acca-7f49-679e-50b8-388c32a7726e-f168a490" class="subtitle grey">4.5.21</div>
-                  </a>
-                  <div data-w-id="1aa5acca-7f49-679e-50b8-388c32a7726f" class="card-circle"></div>
-                </div>
-              </div>
-              <div data-w-id="post-card-2" role="listitem" class="collection-list-item w-dyn-item">
-                <div class="blog-card-image-wrapper">
-                  <div data-w-id="post-card-2-bg" class="background-image" style="background-image:url('/images/Space008.jpeg')">
-                    <div class="image-overlay"></div>
-                    <div data-w-id="post-card-2-hover" class="hover-link-wrapper project-view-link">
-                      <a href="#" class="hover-link w-inline-block">
-                        <div>Read</div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="post-card-info">
-                  <a href="#" class="post-card-description w-inline-block">
-                    <div class="stacked-description">
-                      <h4>Why We Love Webflow (And You Should, Too!)</h4>
-                      <div class="body-display">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                    </div>
-                    <div class="subtitle grey">Interior</div>
-                    <div class="subtitle grey">3.18.21</div>
-                  </a>
-                  <div data-w-id="post-card-2-circle" class="card-circle"></div>
-                </div>
-              </div>
-              <div data-w-id="post-card-3" role="listitem" class="collection-list-item w-dyn-item">
-                <div class="blog-card-image-wrapper">
-                  <div data-w-id="post-card-3-bg" class="background-image" style="background-image:url('/images/Space002.jpeg')">
-                    <div class="image-overlay"></div>
-                    <div data-w-id="post-card-3-hover" class="hover-link-wrapper project-view-link">
-                      <a href="#" class="hover-link w-inline-block">
-                        <div>Read</div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="post-card-info">
-                  <a href="#" class="post-card-description w-inline-block">
-                    <div class="stacked-description">
-                      <h4>7 Things About Web Design Your Boss Wants To Know</h4>
-                      <div class="body-display">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                    </div>
-                    <div class="subtitle grey">Organization</div>
-                    <div class="subtitle grey">4.5.21</div>
-                  </a>
-                  <div data-w-id="post-card-3-circle" class="card-circle"></div>
-                </div>
-              </div>
-              <div data-w-id="post-card-4" role="listitem" class="collection-list-item w-dyn-item">
-                <div class="blog-card-image-wrapper">
-                  <div data-w-id="post-card-4-bg" class="background-image" style="background-image:url('/images/Space012.jpeg')">
-                    <div class="image-overlay"></div>
-                    <div data-w-id="post-card-4-hover" class="hover-link-wrapper project-view-link">
-                      <a href="#" class="hover-link w-inline-block">
-                        <div>Read</div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="post-card-info">
-                  <a href="#" class="post-card-description w-inline-block">
-                    <div class="stacked-description">
-                      <h4>The Worst Advice We&#x27;ve Ever Heard About Web Design</h4>
-                      <div class="body-display">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                    </div>
-                    <div class="subtitle grey">Floor Plans</div>
-                    <div class="subtitle grey">4.5.21</div>
-                  </a>
-                  <div data-w-id="post-card-4-circle" class="card-circle"></div>
-                </div>
-              </div>
-            </div>
           </div>
           <div id="w-node-_1aa5acca-7f49-679e-50b8-388c32a77273-f168a490" class="services-menu-wrapper grey">
             <div class="sticky-services-menu">
@@ -689,6 +592,98 @@ const bodyContentAfterProjects = `
               <div class="wrapper">
                 <div></div>
               </div>
+            </div>
+          </div>
+          <div data-w-id="1aa5acca-7f49-679e-50b8-388c32a7725f" style="-webkit-transform:translate3d(0, 15vh, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 5deg);-moz-transform:translate3d(0, 15vh, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 5deg);-ms-transform:translate3d(0, 15vh, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 5deg);transform:translate3d(0, 15vh, 0) scale3d(0.9, 0.9, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 5deg);opacity:0" role="listitem" class="collection-list-item w-dyn-item">
+            <div class="blog-card-image-wrapper">
+              <div data-w-id="1aa5acca-7f49-679e-50b8-388c32a77261" class="background-image" style="background-image:url('/images/Space006.jpeg')">
+                <div class="image-overlay"></div>
+                <div data-w-id="1aa5acca-7f49-679e-50b8-388c32a77263" class="hover-link-wrapper project-view-link">
+                  <a href="#" class="hover-link w-inline-block">
+                    <div>Read</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="post-card-info">
+              <a href="#" class="post-card-description w-inline-block">
+                <div id="w-node-_1aa5acca-7f49-679e-50b8-388c32a77269-f168a490" class="stacked-description">
+                  <h4>5 Principles Of Effective Web Design</h4>
+                  <div class="body-display">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                </div>
+                <div class="subtitle grey">Floor Plans</div>
+                <div id="w-node-_1aa5acca-7f49-679e-50b8-388c32a7726e-f168a490" class="subtitle grey">4.5.21</div>
+              </a>
+              <div data-w-id="1aa5acca-7f49-679e-50b8-388c32a7726f" class="card-circle"></div>
+            </div>
+          </div>
+          <div data-w-id="post-card-2" role="listitem" class="collection-list-item w-dyn-item">
+            <div class="blog-card-image-wrapper">
+              <div data-w-id="post-card-2-bg" class="background-image" style="background-image:url('/images/Space008.jpeg')">
+                <div class="image-overlay"></div>
+                <div data-w-id="post-card-2-hover" class="hover-link-wrapper project-view-link">
+                  <a href="#" class="hover-link w-inline-block">
+                    <div>Read</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="post-card-info">
+              <a href="#" class="post-card-description w-inline-block">
+                <div class="stacked-description">
+                  <h4>Why We Love Webflow (And You Should, Too!)</h4>
+                  <div class="body-display">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                </div>
+                <div class="subtitle grey">Interior</div>
+                <div class="subtitle grey">3.18.21</div>
+              </a>
+              <div data-w-id="post-card-2-circle" class="card-circle"></div>
+            </div>
+          </div>
+          <div data-w-id="post-card-3" role="listitem" class="collection-list-item w-dyn-item">
+            <div class="blog-card-image-wrapper">
+              <div data-w-id="post-card-3-bg" class="background-image" style="background-image:url('/images/Space002.jpeg')">
+                <div class="image-overlay"></div>
+                <div data-w-id="post-card-3-hover" class="hover-link-wrapper project-view-link">
+                  <a href="#" class="hover-link w-inline-block">
+                    <div>Read</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="post-card-info">
+              <a href="#" class="post-card-description w-inline-block">
+                <div class="stacked-description">
+                  <h4>7 Things About Web Design Your Boss Wants To Know</h4>
+                  <div class="body-display">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                </div>
+                <div class="subtitle grey">Organization</div>
+                <div class="subtitle grey">4.5.21</div>
+              </a>
+              <div data-w-id="post-card-3-circle" class="card-circle"></div>
+            </div>
+          </div>
+          <div data-w-id="post-card-4" role="listitem" class="collection-list-item w-dyn-item">
+            <div class="blog-card-image-wrapper">
+              <div data-w-id="post-card-4-bg" class="background-image" style="background-image:url('/images/Space012.jpeg')">
+                <div class="image-overlay"></div>
+                <div data-w-id="post-card-4-hover" class="hover-link-wrapper project-view-link">
+                  <a href="#" class="hover-link w-inline-block">
+                    <div>Read</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="post-card-info">
+              <a href="#" class="post-card-description w-inline-block">
+                <div class="stacked-description">
+                  <h4>The Worst Advice We&#x27;ve Ever Heard About Web Design</h4>
+                  <div class="body-display">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                </div>
+                <div class="subtitle grey">Floor Plans</div>
+                <div class="subtitle grey">4.5.21</div>
+              </a>
+              <div data-w-id="post-card-4-circle" class="card-circle"></div>
             </div>
           </div>
         </div>
